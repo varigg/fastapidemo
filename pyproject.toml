@@ -1,0 +1,32 @@
+[project]
+name = "fastapidemo"
+version = "0.1.0"
+description = "A small REST API demo"
+authors = [
+    {name = "Steffen Vulpius",email = "steffen.vulpius+github@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)",
+    "sqlalchemy (>=2.0.40,<3.0.0)",
+    "pydantic (>=2.11.4,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "uvicorn (>=0.34.2,<0.35.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "loguru (>=0.6.0,<0.7.0)",
+    "flake8 (>=7.2.0,<8.0.0)"
+]
+[tool.poetry]
+packages = [
+    {include = "app"}
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+ruff = "^0.11.9"
+pytest-coverage = "^0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
